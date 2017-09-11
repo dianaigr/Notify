@@ -54,14 +54,25 @@ body {
       padding: 0; } }
 
 h1 {
+  font-family: 'Pacifico';
+  font-size: 3.5rem;
+  line-height: 1.4;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 5px; }
+  h1 span {
+    color: #2dcc70; }
+
+h2 {
   font-size: 2rem;
   line-height: 1.4;
   color: #fff;
   font-weight: 500;
   margin-bottom: 5px; }
 
-h2 {
+h3 {
   font-size: 1.7rem;
+  line-height: 1.4;
   font-weight: 500;
   color: #212121; }
 
@@ -94,7 +105,7 @@ iframe {
 .banner-top {
   min-height: 400px;
   border-top: 10px solid #2dcc70;
-  background-image: url("../images/black-and-white.jpg");
+  background-image: url("../images/background.jpg");
   background-size: 100%;
   position: relative; }
   @media (max-width: 767px) {
@@ -201,7 +212,7 @@ iframe {
     .video {
       width: 100%; } }
 
-.users-list {
+.testimonials-list {
   list-style: none;
   display: inline-block;
   padding: 0;
@@ -209,7 +220,7 @@ iframe {
   text-align: center;
   font-size: 0;
   position: relative; }
-  .users-list li {
+  .testimonials-list li {
     width: 40px;
     height: 40px;
     overflow: hidden;
@@ -218,12 +229,12 @@ iframe {
     margin: 0 3px;
     position: relative; }
     @media (max-width: 767px) {
-      .users-list li {
+      .testimonials-list li {
         margin-bottom: 6px; } }
-    .users-list li a {
+    .testimonials-list li a {
       text-decoration: none;
       display: inline-block; }
-      .users-list li a:hover:after {
+      .testimonials-list li a:hover:after {
         content: '';
         display: inline-block;
         height: 100%;
@@ -233,9 +244,9 @@ iframe {
         left: 0;
         background-color: #2dcc70;
         opacity: 0.4; }
-    .users-list li img {
+    .testimonials-list li img {
       width: 100%; }
-  .users-list:before {
+  .testimonials-list:before {
     content: '';
     display: inline-block;
     height: 40px;
@@ -248,7 +259,7 @@ iframe {
     background: -webkit-linear-gradient(left, white 10%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(to right, white 10%, rgba(255, 255, 255, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); }
-  .users-list:after {
+  .testimonials-list:after {
     content: '';
     display: inline-block;
     height: 40px;
@@ -261,6 +272,11 @@ iframe {
     background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 10%, white 100%);
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, white 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); }
+
+.user-name {
+  font-size: 1.7rem;
+  color: #212121;
+  height: 10px; }
 
 .social-list {
   list-style: none;

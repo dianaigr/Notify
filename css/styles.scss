@@ -80,14 +80,26 @@ body{
 }
 
 h1{
+  font-family: 'Pacifico';
+  font-size: 3.5rem;
+  line-height: 1.4;
+  color: $white;
+  font-weight: 500;
+  margin-bottom: 5px;
+  span{
+    color: $green-base;
+  }
+}
+h2{
   font-size: 2rem;
   line-height: 1.4;
   color: $white;
   font-weight: 500;
   margin-bottom: 5px;
 }
-h2{
+h3{
   font-size: 1.7rem;
+  line-height: 1.4;
   font-weight: 500;
   color: $color-text;
 }
@@ -125,7 +137,7 @@ iframe{
 .banner-top{
   min-height: 400px;
   border-top: 10px solid $green-base;
-  background-image: url('../images/black-and-white.jpg');
+  background-image: url('../images/background.jpg');
   background-size: 100%;
   position: relative;
   @include respond-to('mobile'){
@@ -253,7 +265,7 @@ iframe{
   }
 }
 
-.users-list{
+.testimonials-list{
   list-style: none;
   display: inline-block;
   padding: 0;
@@ -321,6 +333,12 @@ iframe{
     background: linear-gradient(to right, rgba(255,255,255,0) 10%,rgba(255,255,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
   }
+}
+
+.user-name{
+  font-size: 1.7rem;
+  color: $color-text;
+  height: 10px;
 }
 
 .social-list{

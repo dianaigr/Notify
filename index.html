@@ -4,6 +4,7 @@
     <title>Code test</title>
     <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.min.css">
   </head>
 
@@ -11,7 +12,8 @@
     <section class="banner-top">
       <div class="container">
         <div class="caption">
-          <h1>A great new free psd theme to showcase your new application.</h1>
+          <h1>Notify<span>.</span></h1>
+          <h2>A great new free psd theme to showcase your new application.</h2>
           <ul class="icon-list">
             <li>
               <a href="#">
@@ -38,17 +40,17 @@
         <div class="grid-3 widget-list">
           <div class="column">
             <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
-            <h2>Editable Theme</h2>
+            <h3>Editable Theme</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
           </div>
           <div class="column">
             <span class="icon"><i class="fa fa-star" aria-hidden="true"></i></span>
-            <h2>Flat Design</h2>
+            <h3>Flat Design</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
           </div>
           <div class="column">
             <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
-            <h2>Reach Your Audience</h2>
+            <h3>Reach Your Audience</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
           </div>
         </div>
@@ -58,7 +60,7 @@
       <div class="container">
         <div class="grid-2">
           <div class="column">
-            <h2>Get Notifyed Of Any Updates!</h2>
+            <h3>Get Notifyed Of Any Updates!</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             <form>
               <div class="form-group">
@@ -78,22 +80,23 @@
     <section class="bg-white">
       <div class="container text-center">
         <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</em></p>
-        <ul class="users-list">
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
-          <li><a href="#"><img src="images/girl.jpg" alt="User Photo" /></a></li>
+        <p id="userName" class="user-name"></p>
+        <ul id="testimonials" class="testimonials-list">
+          <li data-name="Jane Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="John Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="Eric Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="Jane Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="Gustav Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="Jane Firth"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="Jane Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="Paul Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="Jane Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="Pedro Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="Josepth Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="Janet Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
+          <li data-name="Jo Boe"><a href="#"><img src="images/user.jpg" alt="User Photo" /></a></li>
         </ul>
-        <h2>Say Hi & Get In Touch</h2>
+        <h3>Say Hi & Get In Touch</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
         <ul class="social-list">
           <li>
@@ -130,6 +133,18 @@
       </div>
     </footer>
 
+    <script type="text/javascript">
+      var elem_list = document.getElementById('testimonials').getElementsByTagName("li");
+      for(var i = 0; i<elem_list.length; i++){
+        elem_list[i].onmouseover = function(){
+          var name = this.getAttribute('data-name');
+          var userTag = document.getElementById("userName").innerHTML = name;
+        };
+        elem_list[i].onmouseleave = function(){
+          var userTag = document.getElementById('userName').innerHTML = "";
+        };
+      }
+    </script>
   </body>
 
 </html>
