@@ -111,8 +111,11 @@ iframe {
   @media (max-width: 1024px) {
     .banner-top {
       min-height: 300px;
-      background-size: auto 100%;
+      background-size: 100%;
       background-position: center; } }
+  @media (max-width: 767px) {
+    .banner-top {
+      background-size: auto 100%; } }
   .banner-top .caption {
     position: absolute;
     top: 50%;
